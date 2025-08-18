@@ -3,6 +3,19 @@
 empty(coalesce(triggerOutputs()?['body/TaskedIMS']?['Email'],''))
 
 
+0928484
+
+{
+  '@odata.type':'#Microsoft.Azure.Connectors.SharePoint.SPListExpandedUser',
+  'Claims': concat('i:0#.f|membership|', triggerOutputs()?['body/Editor']?['Email']),
+  'DisplayName': triggerOutputs()?['body/Editor']?['DisplayName'],
+  'Email': triggerOutputs()?['body/Editor']?['Email']
+}
+
+
+
+848483939
+
 Keep one column: TaskedIMS (Person, single). Remove/deprecate the text IMSTasked.
 	1.	Button (stays pure JSON):
 Put the button on a dummy text column (or keep IMSClaim text). It only sets a flag:
