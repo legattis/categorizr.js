@@ -1,6 +1,11 @@
 # Categorizr.js
 
 
+json(concat('{"Claims":"i:0#.f|membership|', triggerOutputs()?['body/Editor']?['Email'], '"}'))
+
+
+
+
 
 "display": "=if([$IMSClaim] == '', 'block', 'none')",
 
