@@ -4,4 +4,11 @@
   "logonName": "@{concat('i:0#.f|membership|', triggerOutputs()?['body/Editor']?['Email'])}"
 }
 
+
+@equals(triggerOutputs()?['body/IMSClaim'],'ACCEPTED')
+@equals(length(coalesce(triggerOutputs()?['body/TaskedIMS']?['Email'],'')),0)
+
+
+equals(length(coalesce(triggerOutputs()?['body/TaskedIMS']?['Email'],'')),0)
+
 # here
