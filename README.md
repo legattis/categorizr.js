@@ -1,5 +1,7 @@
 # Categorizr.js
 
+empty(coalesce(triggerOutputs()?['body/TaskedIMS']?['Email'],''))
+
 
 Keep one column: TaskedIMS (Person, single). Remove/deprecate the text IMSTasked.
 	1.	Button (stays pure JSON):
