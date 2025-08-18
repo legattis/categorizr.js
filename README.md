@@ -1,5 +1,9 @@
 # Categorizr.js
 
+
+
+"display": "=if([$IMSClaim] == '', 'block', 'none')",
+
 empty(coalesce(triggerOutputs()?['body/TaskedIMS']?['Email'],''))
 
 
