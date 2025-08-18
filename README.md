@@ -1,5 +1,42 @@
 # Categorizr.js
 
+
+	•	Note: We only set IMSClaim="ACCEPTED".
+	•	Button shows only when TaskedIMS is empty (using the person subfield [$TaskedIMS.email]).
+
+	2.	Flow (assign the clicker into Person field):
+	•	Trigger: When an item is created or modified (no trigger condition needed).
+	•	Condition (single AND):
+	•	Row 1 (Expression):
+equals(triggerOutputs()?['body/IMSClaim'],'ACCEPTED')
+	•	Row 2 (Expression):
+equals(length(coalesce(triggerOutputs()?['body/TaskedIMS']?['Email'],'')),0)
+	•	If Yes → Update item:
+	•	ID = ID, Title = Title (or required fields)
+	•	TaskedIMS Claims = Modified By Claims (from the trigger)
+(or expression: triggerOutputs()?['body/Editor']?['Claims'])
+	•	(Optional) IMSClaim = '' (clear the flag so it won’t retrigger)
+	•	(Optional) Concurrency control = On (1) in trigger settings.
+	3.	Views/Dashboards:
+	•	Unassigned queue filter: TaskedIMS is equal to [Blank]
+	•	“Assigned to me” view: TaskedIMS is equal to [Me]
+	•	The button hides automatically once TaskedIMS is set.
+
+About the “mystery populate”
+
+If TaskedIMS filled after you turned the flow off, it’s almost always:
+	•	a queued run finishing late, or
+	•	another flow on the list updating, or
+	•	you briefly had TaskedIMS mapped somewhere in an Update step (Power Automate will write it if the field is present on the card with a value).
+
+Check Run history for the item ID and Item → Version history to see what edited it.
+
+
+
+
+
+
+
 Categorizr.js is a port of bjankord’s categorizr.php script. There is planned
 support for use within node.js and express as well as with the browser.
 
