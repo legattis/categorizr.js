@@ -18,6 +18,18 @@ equals(length(coalesce(triggerOutputs()?['body/TaskedIMS']?['Email'],'')),0)
 concat('i:0#.f|membership|', outputs('Compose_CurrentUserEmail'))
 
 @{outputs('Send_an_HTTP_request_to_SharePoint')?['body']?['d']?['LoginName']}
+-------
+
+{
+  "logonName": "@{concat('i:0#.f|membership|', triggerOutputs()?['body/Editor']?['Email'])}"
+}
+
+body('Send_an_HTTP_request_to_SharePoint')?['d']?['LoginName']
+
+body('Send_an_HTTP_request_to_SharePoint')?['d']?['LoginName']
+
+
+
 
 
 # here
