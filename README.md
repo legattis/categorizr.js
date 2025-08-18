@@ -10,21 +10,25 @@ Put the button on a dummy text column (or keep IMSClaim text). It only sets a fl
   "elmType": "button",
   "txtContent": "Accept",
   "style": {
+    "display": "=if(or([$TaskedIMS.email] == '', [$TaskedIMS] == null), 'inline-flex', 'none')",
     "background-color": "#6AA84F",
-    "color": "white",
+    "color": "#FFFFFF",
     "border": "1px solid #5A9646",
     "border-radius": "999px",
-    "padding": "4px 10px",
+    "padding": "4px 12px",
     "font-size": "12px",
     "font-weight": "600",
-    "cursor": "pointer",
-    "display": "=if(or(empty([$TaskedIMS.email]), [$TaskedIMS.email]==''),'inline-flex','none')"
+    "cursor": "pointer"
   },
   "customRowAction": {
     "action": "setValue",
-    "actionInput": { "IMSClaim": "ACCEPTED" }
+    "actionInput": {
+      "IMSClaim": "ACCEPTED"
+    }
   },
-  "attributes": { "title": "Assign to me" }
+  "attributes": {
+    "title": "Assign to me"
+  }
 }
 
 
