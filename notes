@@ -1,3 +1,7 @@
 # My Notes
 
+{
+  "logonName": "@{concat('i:0#.f|membership|', triggerOutputs()?['body/Editor']?['Email'])}"
+}
+
 # here
