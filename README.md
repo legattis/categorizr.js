@@ -1,6 +1,33 @@
 # Categorizr.js
 
 
+Keep one column: TaskedIMS (Person, single). Remove/deprecate the text IMSTasked.
+	1.	Button (stays pure JSON):
+Put the button on a dummy text column (or keep IMSClaim text). It only sets a flag:
+
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+  "elmType": "button",
+  "txtContent": "Accept",
+  "style": {
+    "background-color": "#6AA84F",
+    "color": "white",
+    "border": "1px solid #5A9646",
+    "border-radius": "999px",
+    "padding": "4px 10px",
+    "font-size": "12px",
+    "font-weight": "600",
+    "cursor": "pointer",
+    "display": "=if(or(empty([$TaskedIMS.email]), [$TaskedIMS.email]==''),'inline-flex','none')"
+  },
+  "customRowAction": {
+    "action": "setValue",
+    "actionInput": { "IMSClaim": "ACCEPTED" }
+  },
+  "attributes": { "title": "Assign to me" }
+}
+
+
 	•	Note: We only set IMSClaim="ACCEPTED".
 	•	Button shows only when TaskedIMS is empty (using the person subfield [$TaskedIMS.email]).
 
