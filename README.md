@@ -10,7 +10,7 @@ Put the button on a dummy text column (or keep IMSClaim text). It only sets a fl
   "elmType": "button",
   "txtContent": "Accept",
   "style": {
-    "display": "=if(or([$TaskedIMS.email] == '', [$TaskedIMS] == null), 'inline-flex', 'none')",
+    "display": "=if(or(empty([$TaskedIMS.email]), empty([$TaskedIMS])),'inline-flex','none')",
     "background-color": "#6AA84F",
     "color": "#FFFFFF",
     "border": "1px solid #5A9646",
@@ -22,13 +22,9 @@ Put the button on a dummy text column (or keep IMSClaim text). It only sets a fl
   },
   "customRowAction": {
     "action": "setValue",
-    "actionInput": {
-      "IMSClaim": "ACCEPTED"
-    }
+    "actionInput": { "IMSClaim": "ACCEPTED" }
   },
-  "attributes": {
-    "title": "Assign to me"
-  }
+  "attributes": { "title": "Assign to me" }
 }
 
 
