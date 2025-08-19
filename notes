@@ -1,5 +1,13 @@
 # My Notes
 
+@and(
+  equals(triggerOutputs()?['body/GotoOIT'], 'Yes-OIT'),
+  or(
+    equals(triggerOutputs()?['body/OITStatus'], 'OIT-Approved'),
+    equals(triggerOutputs()?['body/OITStatus'], 'OIT-Rejected')
+  )
+)
+
 
 and(
   equals(triggerOutputs()?['body/GotoOIT'], 'Yes-OIT'),
