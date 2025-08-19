@@ -6,7 +6,7 @@ firld confirions
 Goal: Only visible when:
 	•	This is an OIT task (GotoOIT = “Yes-OIT”)
 	•	It is not yet completed (OITStatus is blank or in progress)
-=if(and([$GotoOIT] == "Yes-OIT", [$OITStatus] != "OIT-Approved", [$OITStatus] != "OIT-Rejected"), true, false)
+=if(and([$GotoOIT] == "Yes-OIT", [$OITStatus] <> "OIT-Approved", [$OITStatus] <> "OIT-Rejected"), true, false)
 Effect:
 	•	Shown only when OIT is handling it and hasn’t made a decision yet.
 	•	Hidden from PPM users and from all after approval/rejection.
