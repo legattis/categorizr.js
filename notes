@@ -1,6 +1,14 @@
 # My Notes
 
 
+and(
+  equals(triggerOutputs()?['body/GotoOIT'], 'Yes-OIT'),
+  or(
+    equals(triggerOutputs()?['body/OITStatus'], 'Approved'),
+    equals(triggerOutputs()?['body/OITStatus'], 'Rejected')
+  )
+)
+
 =if([$OITStatus] == '', false, true)
 
 =if(AND([$GotoOIT] == 'Yes-OIT', ISBLANK([$OITStatus])), false, true)
