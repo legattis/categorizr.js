@@ -42,6 +42,6 @@ Content-Type: application/json;odata=verbose
 
 triggerOutputs()?['headers']['x-ms-user-email']
 
-
+{ "Claims": "i:0#.f|membership|@{outputs('Compose_CurrentUserEmail')}" }
 
 # here
