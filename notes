@@ -1,5 +1,11 @@
 # My Notes
 
+
+=if(AND([$GotoOIT] == 'Yes-OIT', [$OITStatus] == ''), 'false', 'true')
+
+*^%%##%%^**
+
+
 =if([$GotoOIT] == 'Yes-OIT', if([$OITStatus] != 'OIT-Approved', 'true', 'false'), 'false')
 
 
