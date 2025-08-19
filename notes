@@ -1,6 +1,9 @@
 # My Notes
 
 
+=if(AND([$GotoOIT] == 'Yes-OIT', ISBLANK([$OITStatus])), false, true)
+
+
 =if(AND([$GotoOIT] == 'Yes-OIT', [$OITStatus] == ''), 'false', 'true')
 
 *^%%##%%^**
