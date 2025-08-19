@@ -8,6 +8,9 @@ https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customization/list-
 
 =if(([$GotoOIT] == "Yes-OIT") && ([$OITStatus] != "OIT-Approved") && ([$OITStatus] != "OIT-Rejected"), 'true', 'false')
 
+=if([$GotoOIT] = "Yes-OIT" && [$OITStatus] <> "OIT-Approved" && [$OITStatus] <> "OIT-Rejected", true, false)
+
+
 
 1. Tasked OIT
 Goal: Only visible when:
