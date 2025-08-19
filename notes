@@ -4,6 +4,8 @@ firld confirions
 
 https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customization/list-form-conditional-show-hide#specify-conditional-formula-to-show-or-hide-columns
 
+=if([$GotoOIT] == "Yes-OIT" && [$OITStatus] != "OIT-Approved" && [$OITStatus] != "OIT-Rejected", 'true', 'false')
+
 1. Tasked OIT
 Goal: Only visible when:
 	•	This is an OIT task (GotoOIT = “Yes-OIT”)
