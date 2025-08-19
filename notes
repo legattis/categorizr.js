@@ -28,7 +28,19 @@ body('Send_an_HTTP_request_to_SharePoint')?['d']?['LoginName']
 
 body('Send_an_HTTP_request_to_SharePoint')?['d']?['LoginName']
 
+)))))))))))))))))))))()(((((()())()(
 
+Accept: application/json;odata=verbose
+Content-Type: application/json;odata=verbose
+
+
+{
+  "logonName": "@{concat('i:0#.f|membership|', triggerOutputs()?['headers']['x-ms-user-email'])}"
+}
+
+
+
+triggerOutputs()?['headers']['x-ms-user-email']
 
 
 
