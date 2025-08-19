@@ -1,5 +1,52 @@
 # My Notes
 
+firld confirions
+
+1. Tasked OIT
+Goal: Only visible when:
+	•	This is an OIT task (GotoOIT = “Yes-OIT”)
+	•	It is not yet completed (OITStatus is blank or in progress)
+=if([$GotoOIT] == "Yes-OIT" && [$OITStatus] != "OIT-Approved" && [$OITStatus] != "OIT-Rejected", true, false)
+Effect:
+	•	Shown only when OIT is handling it and hasn’t made a decision yet.
+	•	Hidden from PPM users and from all after approval/rejection.
+
+2. OITApprovedDate
+Goal: Show only if the item has been OIT approved.
+=if(or([$OITStatus] == "OIT-Approved", [$OITStatus] == "OIT-Rejected"), true, false)
+Effect:
+	•	Hidden until the status flips to “OIT-Approved/rejected”.
+	•	Then remains visible for reference to both OIT and PPM.
+
+3. OIT Comments
+Goal: Show only to OIT while they’re reviewing.
+=if([$TaskStatus] == "Completed", false, true)
+✅ Effect:
+	•	Visible to everyone (OIT, PPM, others) during processing.
+	•	Hidden once the task is fully marked as Completed.
+	•	This keeps things clean at the end but open during handoff/collaboration.
+
+
+
+
+
+OIT
+=if([$GotoOIT] == "Yes-OIT" && [$OITStatus] != "OIT-Approved" && [$OITStatus] != "OIT-Rejected", true, false)
+
+PPM
+=if(or(not(empty([$TaskedIMS])), not(empty([$OwningIMS]))), true, false)
+
+
+
+
+
+@empty(triggerOutputs()?['body/OITStatus'])
+
+[
+  {
+    "Claims": "@{first(body('Get_items')?['value'])?['OwningIMS']?['Claims']}"
+  }
+]
 
 [
   {
