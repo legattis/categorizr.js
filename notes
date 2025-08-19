@@ -1,5 +1,8 @@
 # My Notes
 
+=if([$GotoOIT] == 'Yes-OIT', if([$OITStatus] != 'OIT-Approved', 'true', 'false'), 'false')
+
+
 =if(and([$GotoOIT] == 'Yes-OIT', [$OITStatus] != 'OIT-Approved', [$OITStatus] != 'OIT-Rejected'), 'true', 'false')
 
 
