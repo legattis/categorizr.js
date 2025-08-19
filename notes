@@ -1,6 +1,8 @@
 # My Notes
 
 
+=if([$OITStatus] == '', false, true)
+
 =if(AND([$GotoOIT] == 'Yes-OIT', ISBLANK([$OITStatus])), false, true)
 
 
