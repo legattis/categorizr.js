@@ -1,5 +1,13 @@
 # My Notes
 
+
+[
+  {
+    "Claims": "@{first(body('Get_items')?['value'])?['OwningIMS']?['Claims']}"
+  }
+]
+
+
 @equals(empty(triggerOutputs()?['body/OwningIMS']), true)
 
 {
