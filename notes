@@ -1,5 +1,7 @@
 # My Notes
 
+@equals(empty(triggerOutputs()?['body/OwningIMS']), true)
+
 {
   "logonName": "@{concat('i:0#.f|membership|', triggerOutputs()?['body/Editor']?['Email'])}"
 }
