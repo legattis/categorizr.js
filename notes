@@ -44,4 +44,8 @@ triggerOutputs()?['headers']['x-ms-user-email']
 
 { "Claims": "i:0#.f|membership|@{outputs('Compose_CurrentUserEmail')}" }
 
+json(concat('[{"Claims":"', outputs('Get_items')?['body/value']?[0]?['OwningIMS']?['Claims'], '"}]'))
+
+
+
 # here
