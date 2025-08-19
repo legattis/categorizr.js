@@ -1,5 +1,13 @@
 # My Notes
 
+
+@and(
+  equals(triggerOutputs()?['body/GotoOIT'], 'Yes-OIT'),
+  not(equals(triggerOutputs()?['body/OITStatus'], 'Non-OIT')),
+  not(empty(triggerOutputs()?['body/OITStatus']))
+)
+
+
 @and(
   equals(triggerOutputs()?['body/GotoOIT'], 'Yes-OIT'),
   or(
