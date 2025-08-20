@@ -1,5 +1,7 @@
 # My Notes
 
+after reviewing the team’s needs, we’re going to keep everyone’s schedule consistent with a start time in the 7 a.m. hour. This helps us plan and coordinate tasks more smoothly. Thanks for understanding
+
 @and(
   equals(triggerOutputs()?['body/GotoOIT'], 'Yes-OIT'),
   or(
