@@ -1,6 +1,22 @@
 #styling sheets
 
 
+<div style="display:inline-block;background:#0A3A75;border:1px solid #083265;border-radius:8px;mso-padding-alt:0;">
+  <a href="https://vaphath.sharepoint.com/sites/VAPHT/Lists/PPM/AllItems.aspx?viewid=<yourView>"
+     style="display:inline-block;padding:14px 24px;font-family:Arial,Helvetica,sans-serif;
+            font-size:18px;font-weight:bold;line-height:1.2;text-align:center;
+            color:#ffffff;text-decoration:none;border-radius:8px;mso-line-height-rule:exactly;">
+    Open PPM Dashboard – OIT EE Requests
+  </a>
+</div>
+
+
+
+
+
+
+
+
 <style>
   body, td, p, a { font-family: Arial, Helvetica, sans-serif; }
   .wrap { width:820px; border-collapse:collapse; }
