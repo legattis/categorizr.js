@@ -1,5 +1,69 @@
 #styling sheets
 
+
+<style>
+  /* email-safe, table-based */
+  body, td { font-family: Arial, Helvetica, sans-serif; }
+  .wrap     { width:100%; max-width:780px; margin:0 auto; background:#0f172a; color:#e5e7eb; border:1px solid #243142; }
+  .bar      { background:#0A3A75; color:#ffffff; font-weight:700; font-size:18px; padding:16px 20px; }
+  .sub      { background:#111827; color:#a7b3c6; font-size:14px; padding:10px 20px; border-top:1px solid #243142; }
+  .grid     { width:100%; border-collapse:separate; border-spacing:0; border-top:1px solid #243142; border-bottom:1px solid #243142; }
+  .grid td  { padding:14px 16px; font-size:15px; line-height:1.35; }
+  .headcell { background:#0b1b2c; color:#b9c6d8; text-transform:uppercase; letter-spacing:.3px; font-weight:700; font-size:12px; border-bottom:1px solid #243142; }
+  .label    { color:#9fb5cf; text-transform:uppercase; letter-spacing:.25px; font-weight:700; font-size:12px; text-align:right; width:22%; border-right:1px solid #243142; }
+  .value    { color:#e5e7eb; font-weight:600; width:28%; }
+  .row-alt  { background:#0d1927; }
+  .msg      { padding:14px 20px; font-size:15px; color:#cbd5e1; }
+  .btn      { display:inline-block; background:#0A3A75; color:#fff !important; text-decoration:none; font-weight:700; font-size:14px; padding:12px 16px; border:1px solid #072c5a; border-radius:6px; }
+  .pad      { padding:12px 20px 18px; }
+</style>
+
+<table role="presentation" class="wrap" cellpadding="0" cellspacing="0" align="center">
+  <tr><td class="bar">OIT-EUS-EUO-NA-T3-PIT Equipment Delivery</td></tr>
+  <tr>
+    <td class="sub">
+      <strong style="color:#ffffff;">PPM-ERQ-@{outputs('Update_item')?['body/ID']}</strong>
+      <span style="opacity:.8;"> · UD Receiving EE Request</span>
+    </td>
+  </tr>
+
+  <!-- GRID -->
+  <tr>
+    <td>
+      <table role="presentation" class="grid" cellpadding="0" cellspacing="0">
+        <tr>
+          <td class="label">PO</td>
+          <td class="value">@{outputs('Update_item')?['body/PONumber']}</td>
+          <td class="label">Manufacturer</td>
+          <td class="value">@{outputs('Update_item')?['body/Manufacturer']}</td>
+        </tr>
+        <tr class="row-alt">
+          <td class="label">Model</td>
+          <td class="value">@{outputs('Update_item')?['body/Model']}</td>
+          <td class="label">Serials</td>
+          <td class="value">@{outputs('Create_item')?['body/SerialNumber']}</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- MESSAGE + BUTTON -->
+  <tr><td class="msg">
+    New EE Request from <strong>@{outputs('Create_item')?['body/IntakeSource/Value']}</strong> requires OIT approval.
+  </td></tr>
+  <tr>
+    <td class="pad">
+      <a class="btn" href="https://vaphath.sharepoint.com/sites/VAPHT/Lists/PPM/AllItems.aspx?viewid=<yourView>">
+        Open PPM Dashboard – OIT EE Requests
+      </a>
+    </td>
+  </tr>
+</table>
+
+
+
+£}£}££}£}£}£}£}£}£}£}£}£}£}£}£}£}£}£}£}££}'rnemme
+
 <style>
   body, td { font-family: Arial, Helvetica, sans-serif; }
   .card { width:100%; max-width:640px; border:1px solid #e3e7ef; border-top:3px solid #0A3A75; border-radius:8px; background:#fff; }
