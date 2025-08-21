@@ -1,0 +1,27 @@
+#styling sheets
+
+<!doctype html><meta charset="utf-8">
+<style>
+  body { font-family:Segoe UI,Arial; margin:12px; }
+  a { display:block; margin:6px 0; color:#0066cc; text-decoration:none; }
+  a:hover { text-decoration:underline; }
+</style>
+
+<a href="https://dvagov.sharepoint.com/sites/VHAPIT/Logistics/PProperty/SitePages/Page1.aspx" target="contentFrame">Page 1</a>
+<a href="https://dvagov.sharepoint.com/sites/VHAPIT/Logistics/PProperty/SitePages/Page2.aspx" target="contentFrame">Page 2</a>
+<a href="https://dvagov.sharepoint.com/sites/VHAPIT/Logistics/PProperty/Lists/TestList/AllItems.aspx" target="contentFrame">Test List</a>
+
+
+<!doctype html><meta charset="utf-8">
+<body style="font-family:Segoe UI,Arial; margin:20px; color:#777">
+  Select a link from the left…
+</body>
+
+<iframe src="https://dvagov.sharepoint.com/sites/VHAPIT/Logistics/PProperty/SiteAssets/nav.html"
+        width="100%" height="600" style="border:1px solid #ddd"></iframe>
+
+
+<iframe name="contentFrame"
+        src="https://dvagov.sharepoint.com/sites/VHAPIT/Logistics/PProperty/SiteAssets/blank.html"
+        width="100%" height="600" style="border:1px solid #ddd"></iframe>
+
