@@ -1,5 +1,21 @@
 # My Notes
 
+<!-- Navigation iframe with links -->
+<iframe srcdoc='
+  <html>
+    <body style="font-family:Arial; padding:10px;">
+      <p><a href="https://www.microsoft.com" target="contentFrame">Microsoft</a></p>
+      <p><a href="https://www.bing.com" target="contentFrame">Bing</a></p>
+      <p><a href="https://www.wikipedia.org" target="contentFrame">Wikipedia</a></p>
+    </body>
+  </html>
+' 
+width="200" height="300" style="border:1px solid #ccc;"></iframe>
+
+<!-- Content iframe that links will target -->
+<iframe name="contentFrame" src="about:blank" 
+width="600" height="300" style="border:1px solid #ccc;"></iframe>
+
 after reviewing the team’s needs, we’re going to keep everyone’s schedule consistent with a start time in the 7 a.m. hour. This helps us plan and coordinate tasks more smoothly. Thanks for understanding
 
 @and(
