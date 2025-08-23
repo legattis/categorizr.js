@@ -1,15 +1,19 @@
 #styling sheets
 
+
+
+
+
+@and(
+  not(equals(triggerOutputs()?['body/TaskStatus']?['Value'], 'Requested')),
+  not(empty(triggerOutputs()?['body/TaskStatus']?['Value']))
+)
+
+
 @and(
    not(equals(triggerOutputs()?['body/Task_x0020_Status'], 'Requested')),
    not(empty(triggerOutputs()?['body/Task_x0020_Status']))
 )
-
-
-
-
-
-
 
 <div style="display:inline-block;background:#0A3A75;border:1px solid #083265;border-radius:8px;mso-padding-alt:0;">
   <a href="https://vaphath.sharepoint.com/sites/VAPHT/Lists/PPM/AllItems.aspx?viewid=<yourView>"
