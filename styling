@@ -1,7 +1,7 @@
 #styling sheets
 
 
-
+Sanitized eq '0751-Needed' and Seq0751 ne null and Seq0751 gt 0
 
 @equals(triggerOutputs()?['body/Sanitized'],'0751-Needed')
 
