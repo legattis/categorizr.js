@@ -3,6 +3,8 @@
 
 
 
+int(coalesce(outputs('Get_response_details')?['body/AMOUNT'], 0))
+
 if(
   equals(outputs('Get_response_details')?['body/Action'], 'ADD'),
   add(outputs('currentQty'), outputs('amt')),
