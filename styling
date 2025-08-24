@@ -2,6 +2,18 @@
 
 
 
+
+
+@and(
+  equals(triggerOutputs()?['body/FlowUpdated'], false),
+  or(
+    equals(triggerOutputs()?['body/Sanitized'], '0751-Needed'),
+    equals(triggerOutputs()?['body/Sanitized'], '0751-NotNeeded'),
+    equals(triggerOutputs()?['body/Sanitized'], '0751-Recorded')
+  )
+)
+
+
 add(int(coalesce(outputs('currentQty'),0)), int(coalesce(outputs('amt'),0)))
 
 
