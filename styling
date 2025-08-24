@@ -3,6 +3,14 @@
 
 
 
+@equals(triggerOutputs()?['body/Sanitized'],'0751-Needed')
+
+@equals(triggerOutputs()?['body/Sanitized']?['Value'],'0751-Needed')
+
+@or(equals(triggerOutputs()?['body/Seq0751'],null), equals(triggerOutputs()?['body/Seq0751'],0))
+
+
+
 
 @and(
   equals(triggerOutputs()?['body/FlowUpdated'], false),
