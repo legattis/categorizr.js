@@ -1,7 +1,7 @@
 #styling sheets
 
 
-
+first(body('Get_items')?['value'])?['Unit']?['Value']
 
 if(
   equals(outputs('Get_response_details')?['body/Action'], 'ADD'),
