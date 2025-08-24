@@ -2,6 +2,54 @@
 
 
 
+
+
+1) Make the log list (once)
+
+Create EE Requests Action Log with these columns:
+	•	RequestID (Number) – store the EE Request’s ID
+	•	Action (Single line text) – “Created” or “Updated”
+	•	Details (Multiple lines text) – what changed
+	•	PerformedBy (Person)
+	•	PerformedAt (Date & time)
+
+(Nothing fancy—keep it flat so it’s fast.)
+
+⸻
+
+2) Flow: PPM-EE-Requests → Write Action Log
+
+Trigger: When an item is created or modified (EE Requests list)
+
+Steps (exact and simple):
+	1.	Get changes for an item or a file (properties only)
+	•	Site/List: EE Requests
+	•	Id: ID (from trigger)
+	•	Since: Trigger Window Start Token (from trigger)
+	2.	Initialize variable varAction (String) = Updated
+	•	Add a Condition: if Version number (from trigger) equals 1.0 → Set variable varAction = Created.
+	3.	Initialize variable varDetails (String) = empty
+	4.	Append details (only for fields you care about)
+For each key field, add a small condition using the booleans that step 1 gives you:
+	•	If Has Column Changed: TaskStatus = true → Append to string variable varDetails with TaskStatus changed
+	•	If Has Column Changed: AssignedTo = true → append AssignedTo changed
+	•	If Has Column Changed: DueDate = true → append DueDate changed
+	•	(Add a few more you want tracked; keep it short.)
+	5.	Create item in EE Requests Action Log
+	•	RequestID: ID (from trigger)
+	•	Action: varAction
+	•	Details: varDetails (it can be blank if nothing tracked changed)
+	•	PerformedBy: Editor (from trigger)
+	•	PerformedAt: Modified (from trigger)
+
+That’s it. Every create/edit drops a row in the log with who, when, and what changed (for the specific fields you care about). No schema gymnastics, no JSON, no Power Apps.
+
+Optional extras (only if you want later):
+	•	Add a second flow “When an item is deleted” to log deletes the same way.
+	•	Add a view on the log grouped by RequestID so you can open a request and see its history in one place.
+
+
+
 add(
   int(
     coalesce(
