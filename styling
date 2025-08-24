@@ -3,6 +3,12 @@
 
 
 
+if(
+  equals(outputs('Get_response_details')?['body/Action'], 'ADD'),
+  add(int(outputs('currentQty')), int(outputs('amt'))),
+  max(sub(int(outputs('currentQty')), int(outputs('amt'))), 0)
+)
+
 int(coalesce(outputs('Get_response_details')?['body/AMOUNT'], 0))
 
 if(
