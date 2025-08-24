@@ -1,7 +1,55 @@
 #styling sheets
 
 
-
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/view-formatting.schema.json",
+  "tileProps": {
+    "hideSelection": true,
+    "title": {
+      "text": "[$LinkTitle]",
+      "style": {
+        "font-size": "18px",
+        "font-weight": "600",
+        "color": "#f5f5f5"
+      }
+    },
+    "subtitle": {
+      "text": "=if([$Unit.Value] != null, 'Unit: ' + [$Unit.Value], '')",
+      "style": {
+        "font-size": "12px",
+        "color": "#d0d0d0"
+      }
+    },
+    "description": {
+      "text": "=concat('Qty: ', [$QtyOnHand], if([$MinThreshold] != null, '  •  Min ', ''), if([$MinThreshold] != null, [$MinThreshold], ''))",
+      "style": {
+        "font-size": "14px",
+        "font-weight": "700",
+        "color": "#ffffff"
+      }
+    },
+    "footer": {
+      "text": "=if([$LastUpdated] != null, 'Updated ' + toLocaleDateString([$LastUpdated]) + ' ' + toLocaleTimeString([$LastUpdated]), '')",
+      "style": {
+        "font-size": "11px",
+        "color": "#cfcfcf"
+      }
+    },
+    "image": {
+      "url": "",
+      "width": 0,
+      "height": 0
+    },
+    "formatter": {
+      "elmType": "div",
+      "style": {
+        "background-color": "#002147",
+        "border-radius": "10px",
+        "padding": "12px"
+      }
+    }
+  }
+}
 
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/view-formatting.schema.json",
