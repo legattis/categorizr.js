@@ -1,6 +1,14 @@
 #styling sheets
 
 
+if(
+  equals(toUpper(outputs('Get_response_details')?['body/Action']), 'ADD'),
+  add(int(coalesce(outputs('currentQty'),0)), int(coalesce(outputs('amt'),0))),
+  max(sub(int(coalesce(outputs('currentQty'),0)), int(coalesce(outputs('amt'),0))), 0)
+)
+
+'887878**&*&*&*&*&*&*&*&*&*&**&*&&*&*&**&*&*&*&*&*&*&
+
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
   "height": "140",
