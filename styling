@@ -2,6 +2,19 @@
 
 
 
+
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/view-formatting.schema.json",
+  "tileProps": {
+    "title": { "text": "TEST TITLE" },
+    "subtitle": { "text": "TEST SUBTITLE" },
+    "description": { "text": "TEST DESC" },
+    "footer": { "text": "TEST FOOTER" },
+    "image": { "url": "", "width": 0, "height": 0 }
+  }
+}
+
+
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/view-formatting.schema.json",
   "tileProps": {
