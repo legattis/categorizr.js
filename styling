@@ -2,6 +2,56 @@
 
 
 
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/view-formatting.schema.json",
+  "tileProps": {
+    "hideSelection": true,
+    "formatter": {
+      "elmType": "div",
+      "style": {
+        "display": "inline-block",
+        "vertical-align": "top",
+        "height": "200px",
+        "width": "200px",
+        "margin": "10px",
+        "background-color": "#1F53AD",
+        "border": "1px solid #A2A4A6",
+        "color": "#FFFFFF",
+        "border-radius": "10px",
+        "padding": "16px",
+        "box-shadow": "2px 2px 6px rgba(0,0,0,0.1)",
+        "font-size": "15px"
+      },
+      "children": [
+        {
+          "elmType": "span",
+          "txtContent": "=concat('Brand: ', [$LinkTitle])",
+          "style": { "font-size": "17px", "font-weight": "700", "margin-bottom": "8px", "display": "block" }
+        },
+        {
+          "elmType": "span",
+          "txtContent": "=concat('Model: ', [$QtyOnHand])",
+          "style": { "margin-bottom": "6px", "display": "block", "font-size": "15px" }
+        },
+        {
+          "elmType": "span",
+          "txtContent": "=concat('Processor: ', if([$Unit.Value] != null, [$Unit.Value], [$Unit]))",
+          "style": { "margin-bottom": "6px", "display": "block", "font-size": "15px" }
+        },
+        {
+          "elmType": "span",
+          "txtContent": "=concat('RAM: ', if([$LastUpdated] != null, toLocaleDateString([$LastUpdated]) + ' ' + toLocaleTimeString([$LastUpdated]), '-'))",
+          "style": { "margin-bottom": "6px", "display": "block", "font-size": "15px" }
+        }
+      ]
+    }
+  }
+}
+
+
+
+
+{
   "$schema": "https://developer.microsoft.com/json-schemas/sp/view-formatting.schema.json",
   "hideSelection": true,
   "hideColumnHeader": true,
