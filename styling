@@ -2,6 +2,15 @@
 
 
 
+if(
+  greater(
+    int(coalesce(item()?['_x0053_eq0751'], 0)),
+    variables('maxSeq')
+  ),
+  int(coalesce(item()?['_x0053_eq0751'], 0)),
+  variables('maxSeq')
+)
+
 @and(
   equals(triggerOutputs()?['body/Sanitized']?['Value'], '0751-Needed'),
   or(
