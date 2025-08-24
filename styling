@@ -1,6 +1,97 @@
 #styling sheets
 
 
+
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/view-formatting.schema.json",
+  "gallery": {
+    "cardFormatter": {
+      "elmType": "div",
+      "style": {
+        "width": "100%",
+        "maxWidth": "960px",
+        "margin": "10px auto",
+        "padding": "14px 20px",
+        "background-color": "#f8f9fb",
+        "border": "1px solid #d0d7e2",
+        "border-radius": "10px",
+        "box-shadow": "0 2px 8px rgba(0,0,0,.05)",
+        "display": "flex",
+        "alignItems": "center",
+        "justifyContent": "space-between"
+      },
+      "children": [
+        {
+          "elmType": "div",
+          "style": {
+            "flex": "1",
+            "display": "flex",
+            "flexDirection": "column"
+          },
+          "children": [
+            {
+              "elmType": "span",
+              "txtContent": "[$LinkTitle]",
+              "style": {
+                "font-size": "18px",
+                "font-weight": "600",
+                "color": "#20262e",
+                "margin-bottom": "4px"
+              }
+            },
+            {
+              "elmType": "span",
+              "txtContent": "=if([$Unit] != null, 'Unit: ' + [$Unit], '')",
+              "style": {
+                "font-size": "12px",
+                "color": "#5d6470",
+                "margin-bottom": "6px"
+              }
+            },
+            {
+              "elmType": "span",
+              "txtContent": "=if([$LastUpdated] != null, 'Updated ' + toLocaleDateString([$LastUpdated]) + ' ' + toLocaleTimeString([$LastUpdated]), '')",
+              "style": {
+                "font-size": "11px",
+                "color": "#7a808a"
+              }
+            }
+          ]
+        },
+        {
+          "elmType": "div",
+          "style": {
+            "text-align": "right",
+            "min-width": "120px"
+          },
+          "children": [
+            {
+              "elmType": "span",
+              "txtContent": "[$QtyOnHand]",
+              "style": {
+                "font-size": "40px",
+                "font-weight": "700",
+                "color": "=if([$MinThreshold] != null && [$QtyOnHand] <= [$MinThreshold], '#d83b01', '#205493')",
+                "line-height": "1"
+              }
+            },
+            {
+              "elmType": "div",
+              "txtContent": "=if([$MinThreshold] != null, 'Min ' + [$MinThreshold], '')",
+              "style": {
+                "font-size": "12px",
+                "color": "#5d6470",
+                "margin-top": "4px"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+
+
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/view-formatting.schema.json",
   "hideSelection": true,
