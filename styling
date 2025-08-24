@@ -2,6 +2,13 @@
 
 
 
+
+if(
+  equals(outputs('Get_response_details')?['body/Action'], 'ADD'),
+  add(outputs('currentQty'), outputs('amt')),
+  max(sub(outputs('currentQty'), outputs('amt')), 0)
+)
+
 <iframe 
     src="https://yourtenant.sharepoint.com/sites/YOURSITENAME/Lists/EERequests/AllItems.aspx" 
     width="100%" 
