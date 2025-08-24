@@ -1,6 +1,78 @@
 #styling sheets
 
 
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/view-formatting.schema.json",
+  "hideSelection": true,
+  "rowFormatter": {
+    "elmType": "div",
+    "style": {
+      "display": "inline-block",
+      "width": "280px",
+      "margin": "8px",
+      "padding": "16px",
+      "border": "1px solid #e1e1e1",
+      "border-radius": "10px",
+      "box-shadow": "0 2px 6px rgba(0,0,0,.08)",
+      "background-color": "=if([$MinThreshold] != null && [$QtyOnHand] <= [$MinThreshold], '#fff4ce', '#e8f1fb')"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "style": {
+          "display": "flex",
+          "justifyContent": "space-between",
+          "alignItems": "center",
+          "margin-bottom": "6px"
+        },
+        "children": [
+          {
+            "elmType": "span",
+            "txtContent": "[$LinkTitle]",
+            "style": { "font-size": "16px", "font-weight": "600" }
+          },
+          {
+            "elmType": "span",
+            "txtContent": "[$Unit]",
+            "style": { "font-size": "12px", "opacity": "0.75" }
+          }
+        ]
+      },
+      {
+        "elmType": "div",
+        "txtContent": "[$QtyOnHand]",
+        "style": {
+          "font-size": "44px",
+          "font-weight": "700",
+          "line-height": "1",
+          "margin-bottom": "6px"
+        }
+      },
+      {
+        "elmType": "div",
+        "style": {
+          "display": "flex",
+          "justifyContent": "space-between",
+          "font-size": "12px",
+          "opacity": "0.85"
+        },
+        "children": [
+          {
+            "elmType": "span",
+            "txtContent": "=if([$MinThreshold] != null, 'Min: ' + [$MinThreshold], '')"
+          },
+          {
+            "elmType": "span",
+            "txtContent": "=if([$LastUpdated] != null, 'Updated: ' + toLocaleDateString([$LastUpdated]), '')"
+          }
+        ]
+      }
+    ]
+  }
+}
+
+
+
 first(body('Get_items')?['value'])?['Unit']?['Value']
 
 if(
