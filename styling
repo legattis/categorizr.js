@@ -2,7 +2,29 @@
 
 
 
-
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/view-formatting.schema.json",
+  "tileProps": {
+    "hideSelection": true,
+    "title": {
+      "text": "[$LinkTitle]",
+      "style": { "font-size": "18px", "font-weight": "600", "color": "#20262e" }
+    },
+    "subtitle": {
+      "text": "=if([$Unit] != null, 'Unit: ' + [$Unit], '')",
+      "style": { "font-size": "12px", "color": "#5d6470" }
+    },
+    "description": {
+      "text": "=concat('Qty: ', [$QtyOnHand], if([$MinThreshold] != null, '  •  Min ', ''), if([$MinThreshold] != null, [$MinThreshold], ''))",
+      "style": { "font-size": "14px", "font-weight": "700", "color": "=if([$MinThreshold] != null && [$QtyOnHand] <= [$MinThreshold], '#d83b01', '#205493')" }
+    },
+    "footer": {
+      "text": "=if([$LastUpdated] != null, 'Updated ' + toLocaleDateString([$LastUpdated]) + ' ' + toLocaleTimeString([$LastUpdated]), '')",
+      "style": { "font-size": "11px", "color": "#7a808a" }
+    },
+    "image": { "url": "", "width": 0, "height": 0 }
+  }
+}
 
 
 {
