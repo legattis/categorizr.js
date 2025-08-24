@@ -2,6 +2,42 @@
 
 
 
+
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+  "height": "250",
+  "width": "500",
+  "hideSelection": true,
+  "formatter": {
+    "elmType": "div",
+    "txtContent": "Wowee!",
+    "style": {
+      "background-color": "tan"
+    }
+  },
+  "groupProps": {
+    "headerFormatter": {
+      "elmType": "div",
+      "txtContent": "@group.fieldData",
+      "style": {
+        "font-size": "22px",
+        "font-weight": "bold",
+        "flex-wrap": "wrap",
+        "display": "flex",
+        "box-sizing": "border-box",
+        "padding": "4px 8px 5px 8px",
+        "border-radius": "6px",
+        "align-items": "center",
+        "white-space": "nowrap",
+        "overflow": "hidden",
+        "margin": "1px 4px 4px 1px",
+        "background-color": "=if(@group.fieldData == 'Done', '#CAF0CC', if (@group.fieldData == 'Cancelled', '#FABBC3', if(@group.fieldData == 'In Progress', '#D4E7F6', if (@group.fieldData == 'Proposed', '#FFEBC0',  ''))))"
+      }
+    }
+  }
+}
+
+
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/view-formatting.schema.json",
   "tileProps": {
