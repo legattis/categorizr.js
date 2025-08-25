@@ -1,6 +1,227 @@
 
 ## speak 
 
+
+
+1.	Wireframe Layout (visual structure in words)
+	2.	Step-by-Step Build Guide
+	3.	Recommended Flows to Automate Updating
+
+⸻
+
+1. Wireframe Layout (Visual Structure)
+
+Think of the site as a simple 3-tab portal. Here’s the “sketch in words”:
+
+Home (Mailroom Hub)
+-------------------------------------------------
+ Banner: “Mailroom Hub – Training, SOPs, Updates”
+-------------------------------------------------
+[ Training ]  [ Reference ]  [ Updates & Announcements ]
+
+QUICK LINKS: Mail Stop Directory | Logs & Forms | Contacts
+
+
+Training Page
+-------------------------------------------------
+ Section 1: Required Training (Enterprise)
+   - TMS courses list + completion tracker
+-------------------------------------------------
+ Section 2: Local Training (Pittsburgh SOPs)
+   - Daily Ops (mail stops, certified mail, labs, pharmacy, etc.)
+   - Machines (meter, sorter, copier)
+   - Logs (which log, when to sign, where kept)
+-------------------------------------------------
+ Section 3: External Training
+   - USPS Gateway, NPF, MDP Online
+
+
+Reference Page
+-------------------------------------------------
+ Section 1: Mail Stop Directory
+   - Editable list (by building, floor, dept)
+-------------------------------------------------
+ Section 2: Logs & Forms
+   - Pharmacy, Radiology, Custody Transfer, etc.
+   - Links to upload/download templates
+-------------------------------------------------
+ Section 3: Contacts & Escalation
+   - Lead, Supervisor, Backup
+-------------------------------------------------
+ Section 4: Machines & Tools
+   - Quick “how-to” cheat sheets
+
+Updates Page
+-------------------------------------------------
+ Section: Announcements
+   - Posts from Lead (date-stamped, reverse order)
+   - Example: “9/1 – Lab pickup time now 1:30 PM”
+-------------------------------------------------
+
+2. Step-by-Step Build Guide
+
+Home Page
+	•	Use Hero Web Part for the three big buttons (Training / Reference / Updates).
+	•	Add a Quick Links web part for Mail Stop List, Logs, Contacts.
+
+Training Page
+	•	Use Collapsible Sections (the accordion style you already started).
+	•	For Required Training:
+	•	Keep your TMS list.
+	•	Add a simple list/table for “Who’s completed what” (clerks can update).
+	•	For Local Training:
+	•	Break into “Daily Operations,” “Machines,” and “Logs” sections.
+	•	Link each topic to a 1-page SOP or short PDF.
+	•	For External Training:
+	•	Link out to USPS/NPF/MDP with a note on TMS credit if relevant.
+
+Reference Page
+	•	Create a Mail Stop Directory List in SharePoint (not static text).
+	•	Columns: Building | Floor | Dept | Notes | Last Updated By.
+	•	Set permissions so all clerks can add/edit.
+	•	Logs & Forms: Upload blank templates and instructions.
+	•	Contacts: Small web part with Lead/Supervisor/Backup info.
+	•	Machines: Upload 1-page cheat sheets or short guides.
+
+Updates Page
+	•	Use News web part (perfect for “Lead’s Notes”).
+	•	Williams can add a quick note (title, 2–3 sentences).
+	•	Reverse chronological display (most recent on top).
+
+⸻
+
+3. Recommended Flows (to make updating easier)
+
+Here’s where automation makes it painless:
+	1.	Mail Stop Directory Flow
+	•	Trigger: When an item in “Mail Stop Directory” list is updated.
+	•	Action: Post a notification in “Updates” page (e.g., “Mail Stop List updated by Karen W on 8/25”).
+	•	Benefit: Everyone sees when changes happen, no confusion.
+	2.	Training Completion Tracker Flow
+	•	Trigger: When a clerk marks a training item as “Completed” in the Training List.
+	•	Action: Send auto-email to Lead + Supervisor with summary.
+	•	Benefit: No chasing, accountability is logged.
+	3.	Updates Posting Flow
+	•	Trigger: When Williams adds a News post.
+	•	Action: Auto-email to clerks with subject: “Mailroom Update – [Title].”
+	•	Benefit: Reinforces that updates are official, visible, and backed by you.
+	4.	Log Oversight Flow (Optional)
+	•	Trigger: If a required log (Pharmacy, Radiology, Custody Transfer) hasn’t been updated in X days.
+	•	Action: Send reminder to responsible clerk + CC Lead.
+	•	Benefit: Prevents lapses in regulated logs.
+
+⸻
+
+✅ Bottom line: this structure gives you clarity (3 clean sections), authority reinforcement (Lead’s updates are official), and automation (flows keep everyone accountable without you chasing them).
+
+
+Tracking KW Updates & Acknowledgment
+
+Updates Page Setup
+	•	Keep using the News web part (KW posts changes/announcements).
+	•	Add a custom list called “Mailroom Update Acknowledgment” with these columns:
+	•	Update Title/ID (linked to the News post)
+	•	Posted By (auto = KW)
+	•	Date Posted
+	•	Acknowledged By (Person field, allows multiple entries)
+	•	Date Acknowledged
+
+Clerks would go in and simply click “+ New” → Add their name to show they’ve read it.
+
+⸻
+
+Flow to Automate Acknowledgment Tracking
+	•	Trigger: When KW creates a new News post.
+	•	Action:
+	1.	Auto-create a new item in “Mailroom Update Acknowledgment” with that post’s Title + Date.
+	2.	Send an email/Teams message to clerks: “New Mailroom Update Posted: [Title]. Please acknowledge here → [link to acknowledgment list].”
+	•	Optional Escalation: If not all clerks acknowledge within 48 hours, send reminder to clerk + CC KW (and you, if needed).
+
+⸻
+
+Dashboard / Visibility
+	•	Add a small list web part to the Updates page that shows:
+	•	Update Title | Date | % of clerks acknowledged.
+	•	This lets KW and you instantly see who’s read her updates.
+
+⸻
+
+✅ Result:
+	•	Every time KW posts, it automatically becomes a required acknowledgment item.
+	•	Clerks can’t ignore her or claim they “didn’t know” because you’ll have a paper trail.
+	•	It reinforces KW’s authority and makes her updates official, trackable instructions.
+
+List: Mailroom Update Acknowledgment
+
+Create the list
+	1.	New list → Mailroom Update Acknowledgment
+	2.	Description: “Clerks confirm they’ve read operational updates.”
+
+Columns (add in this order)
+	•	Update Title – Single line of text (Required)
+Short name of the update (matches the News/SOP title).
+	•	Update Link – Hyperlink (Required)
+URL to the News post/SOP/change note.
+	•	Acknowledged By – Person or Group (Required; single selection)
+Leave “Allow selection of Groups” = No.
+	•	Acknowledged On – Date and Time (Optional display; defaults to Created)
+No need to show on form; it’s for views/audits.
+	•	Notes (optional) – Multiple lines of text
+Use for quick comments like “Reviewed with Pharmacy.”
+
+Leave the built-in Title column; rename it to Record ID (or hide in forms) to avoid confusion.
+
+Settings
+	•	Versioning: On → Create a version each time you edit an item
+	•	Advanced settings → Item-level permissions:
+	•	Read access: Read all items
+	•	Create and Edit access: Create items and edit items that were created by the user
+(Prevents people from editing others’ acknowledgments.)
+	•	Content types: Off (keep it simple)
+
+Permissions
+	•	Owners: Full Control (you, lead)
+	•	Members (clerks): Contribute
+	•	Visitors (if any): Read
+
+Views (add these)
+	1.	All Acknowledgments (default)
+	•	Columns: Update Title, Update Link, Acknowledged By, Acknowledged On
+	•	Sort: Acknowledged On (Descending)
+	2.	My Acknowledgments
+	•	Filter: Acknowledged By is equal to [Me]
+	•	Columns: Update Title, Update Link, Acknowledged On
+	•	Sort: Acknowledged On (Descending)
+	3.	By Update
+	•	Group by: Update Title (Ascending)
+	•	Columns: Acknowledged By, Acknowledged On
+	•	Expand groups: Collapsed
+
+Form tweaks (fast, no code)
+	•	New item form order: Update Title → Update Link → Acknowledged By → Notes
+	•	Hide Acknowledged On from the form (it’s auto-captured as Created).
+	•	Add a Help text note (List settings → Form settings):
+“Open the update, then submit this acknowledgment. Use Notes only if you coordinated with another service.”
+
+How clerks will use it
+	•	From the Updates page (your News post), include a link: “Acknowledge this update” → points to the list’s New item form.
+	•	Clerk fills Update Title, Update Link (paste), confirms Acknowledged By (auto-resolves themselves), Save. Done.
+
+⸻
+
+Optional (nice-to-have, still no premium anything)
+	•	Add a List web part on the Updates page showing the By Update view so KW/you can see roll-ups at a glance.
+	•	Add a Quick Link button labeled “New Acknowledgment” that opens the New form directly. 
+
+
+
+
+
+
+
+
+------------------////------------//2
+
 Manager’s Summary – Mailroom Lead Concerns
 	•	Context:
 	•	Karen Williams is the designated lead for Mailroom/Repro. She directs workflow and assigns daily tasks but does not have full supervisory authority.
