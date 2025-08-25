@@ -214,6 +214,59 @@ Optional (nice-to-have, still no premium anything)
 	•	Add a Quick Link button labeled “New Acknowledgment” that opens the New form directly. 
 
 
+Flow: Mailroom Update Acknowledgment Reminder
+
+Trigger
+	•	Recurrence: once per day (morning, e.g., 8:00 AM).
+
+⸻
+
+Steps
+
+1. Get recent updates
+	•	Get items from Mailroom Update Acknowledgment’s parent source (could be your News posts list or Update Registry list, depending on how you log updates).
+	•	Filter: PostedOn is within last X days (e.g., 7).
+	•	For each update → capture Title, Update Link, PostedOn.
+
+⸻
+
+2. Get full staff list
+	•	Have a separate Mailroom Staff list with:
+	•	Staffer (Person)
+	•	Active (Yes/No)
+	•	Get items → filter Active = Yes.
+
+⸻
+
+3. Compare acknowledgments
+
+For each Update:
+	•	Get items from Mailroom Update Acknowledgment where Update Title = this update’s Title.
+	•	Collect all users in Acknowledged By.
+	•	Subtract those users from the full staff list.
+	•	Remaining = staff who haven’t acknowledged.
+
+⸻
+
+4. Send reminders
+	•	Apply to each (Remaining staff): send an email or Teams message.
+	•	Subject: Reminder: Please acknowledge Mailroom Update “[Title]”
+•	Body:
+This is a reminder to acknowledge the update: “[Title]”.
+Read the update here: [Update Link]  
+Acknowledge it here: [Acknowledgment Form Link]
+•	CC KW (optional) so she sees who needed nudging.
+
+5. (Optional) Escalation
+	•	After 72 hours (second run), if staffer still hasn’t acknowledged, escalate with CC to you.
+
+⸻
+
+Why this works
+
+✅ Simple (no premium connectors).
+✅ Transparent — everyone knows acknowledgments are tracked.
+✅ Reinforces KW’s authority without you chasing staff manually.
 
 
 
