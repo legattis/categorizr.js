@@ -1,7 +1,17 @@
 
 ## speak 
 
+@and(
+  equals(item()?['Sanitized']?['Value'],'0751-Needed'),
+  equals(item()?['Campus'], triggerOutputs()?['body/Campus'])
+)
 
+Sanitized eq '0751-Needed' and Campus eq '
+
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 1.	Wireframe Layout (visual structure in words)
 	2.	Step-by-Step Build Guide
