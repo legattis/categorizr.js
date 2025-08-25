@@ -1,6 +1,18 @@
 #styling sheets
 
 
+if(
+  equals(toUpper(outputs('Get_response_details')?['body/ACTION']), 'PULL'),
+  max(
+    sub(int(coalesce(outputs('currentQty'), 0)), int(coalesce(outputs('amt'), 0))),
+    0
+  ),
+  add(
+    int(coalesce(outputs('currentQty'), 0)),
+    int(coalesce(outputs('amt'), 0))
+  )
+)
+
 https://marknanneman.wordpress.com/2024/08/21/best-practices-deep-linking-to-a-power-automate-flow-run/
 
 
