@@ -2,6 +2,9 @@
 
 
 
+
+BatchSelect eq 1 and Collected eq 'Not-Collected'  
+
 if(
   greater(
     int(coalesce(item()?['_x0053_eq0751'], 0)),
