@@ -2,6 +2,11 @@
 
 
 @and(
+  equals(item()?['DeviceType'], 'Laptop'),
+  equals(item()?['Status'], 'Stored')
+)
+
+@and(
   equals(item()?['Sanitized']?['Value'],'0751-Needed'),
   equals(item()?['Campus']?['Value'], triggerOutputs()?['body/Campus']?['Value'])
 )
