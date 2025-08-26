@@ -2,6 +2,9 @@
 
 
 
+
+@equals(item()?['DeviceType'], items('Apply_to_each')?['device'])
+
 [
   {"title":"LAPTOPS","device":"Laptop"},
   {"title":"DESKTOPS","device":"Desktop"},
