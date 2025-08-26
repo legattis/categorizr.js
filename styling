@@ -2,6 +2,16 @@
 
 
 
+[
+  {"title":"LAPTOPS","device":"Laptop"},
+  {"title":"DESKTOPS","device":"Desktop"},
+  {"title":"AIO","device":"AIO"},
+  {"title":"MONITORS","device":"Monitor"},
+  {"title":"PRINTERS","device":"Printer"}
+]
+
+
+
 @or(
   not(equals(triggerOutputs()?['body/Status']?['Value'], triggerOutputs()?['body/Status']?['PreviousValue'])),
   not(equals(triggerOutputs()?['body/DeviceType'], triggerOutputs()?['body/DeviceType@odata.previousValue']))
