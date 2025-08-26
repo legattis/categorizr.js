@@ -1,6 +1,13 @@
 #styling sheets
 
 
+
+@or(
+  not(equals(triggerOutputs()?['body/Status']?['Value'], triggerOutputs()?['body/Status']?['PreviousValue'])),
+  not(equals(triggerOutputs()?['body/DeviceType'], triggerOutputs()?['body/DeviceType@odata.previousValue']))
+)
+
+m
 if(
   equals(
     toUpper(trim(coalesce(outputs('actionRaw'), ''))),
