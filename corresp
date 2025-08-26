@@ -1,5 +1,8 @@
-
 ## speak 
+
+
+@and(   equals(triggerOutputs()?['body/Sanitized']?['Value'], '0751-Needed'),   or(     equals(triggerOutputs()?['body/OData__x0053_eq0751'], null),     equals(triggerOutputs()?['body/OData__x0053_eq0751'], 0)   ) )
+
 
 @and(
   equals(item()?['Sanitized']?['Value'],'0751-Needed'),
