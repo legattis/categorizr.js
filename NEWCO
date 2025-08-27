@@ -2,6 +2,11 @@
 
 
 @equals(
+  toLower(item()?['DeviceType']?['Value']),
+  toLower(items('Apply_to_each')?['device'])
+)
+
+@equals(
   coalesce(item()?['DeviceType']?['Value'], item()?['DeviceType']),
   items('Apply_to_each')?['device']
 )
