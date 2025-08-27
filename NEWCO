@@ -1,6 +1,11 @@
 ## fRESH SHEEET
 
 
+@or(
+  equals(item()?['DeviceType']?['Value'], triggerBody()?['device']),
+  contains(string(item()?['DeviceType']), concat('"Value":"', triggerBody()?['device'], '"'))
+)
+
 @equals(
   item()?['DeviceType']?['Value'],
   triggerBody()?['device']
