@@ -1,6 +1,9 @@
 ## fRESH SHEEET
 
 
+DeviceType eq '@{triggerBody()?['device']}'
+
+
 @{coalesce(first(body('Filter_array_-_counterRow'))?['Id'], first(body('Filter_array_-_counterRow'))?['ID'])}
 
 @equals(
