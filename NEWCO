@@ -1,6 +1,11 @@
 ## fRESH SHEEET
 
 
+@equals(
+  toLower(string(item()?['DeviceType']?['Value'])),
+  toLower(string(triggerBody()?['device']))
+)
+
 body('Get_items')?['value']
 
 @equals(
