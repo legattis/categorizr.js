@@ -2,6 +2,11 @@
 
 
 @equals(
+  item()?['DeviceType']?['Value'],
+  triggerBody()?['device']
+)
+
+@equals(
   toLower(string(item()?['DeviceType']?['Value'])),
   toLower(string(triggerBody()?['device']))
 )
