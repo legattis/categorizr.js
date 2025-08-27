@@ -1,6 +1,8 @@
 ## fRESH SHEEET
 
 
+@{coalesce(first(body('Filter_array_-_counterRow'))?['Id'], first(body('Filter_array_-_counterRow'))?['ID'])}
+
 @equals(
   toLower(coalesce(item()?['DeviceType']?['Value'], item()?['DeviceType'])),
   toLower(items('Apply_to_each')?['device'])
