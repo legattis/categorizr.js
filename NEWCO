@@ -1,4 +1,6 @@
 ## fRESH SHEEET
 
 
+concat('DeviceType eq ''', triggerBody()?['device'], '''')
+
 concat("DeviceType/Value eq '", triggerBody()?['device'], "'")
