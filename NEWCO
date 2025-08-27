@@ -2,6 +2,114 @@
 
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+  "height": "156",
+  "width": "216",
+  "hideSelection": true,
+  "formatter": {
+    "elmType": "div",
+    "style": {
+      "padding": "8px",
+      "box-sizing": "border-box",
+      "background-color": "#002060"   /* dark blue background for the whole list container */
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "style": {
+          "display": "flex",
+          "justify-content": "space-between",
+          "align-items": "center",
+          "height": "100%",
+          "width": "100%",
+          "background-color": "#ffffff",   /* invert card color */
+          "border-radius": "10px",
+          "padding": "12px 16px",
+          "box-sizing": "border-box",
+          "color": "#002060",              /* blue text now */
+          "box-shadow": "2px 2px 6px rgba(0,0,0,0.15)"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "style": {
+              "display": "flex",
+              "flex-direction": "column",
+              "justify-content": "center"
+            },
+            "children": [
+              {
+                "elmType": "span",
+                "txtContent": "[$Title]",
+                "style": {
+                  "font-size": "16px",
+                  "font-weight": "700",
+                  "margin-bottom": "4px",
+                  "color": "#002060"       /* inverted text */
+                }
+              },
+              {
+                "elmType": "div",
+                "children": [
+                  {
+                    "elmType": "span",
+                    "txtContent": "Unit: ",
+                    "style": { "font-size": "12px", "color": "#555555" }
+                  },
+                  {
+                    "elmType": "span",
+                    "txtContent": "[$Unit]",
+                    "style": { "font-size": "12px", "color": "#002060" }
+                  }
+                ]
+              },
+              {
+                "elmType": "div",
+                "children": [
+                  {
+                    "elmType": "span",
+                    "txtContent": "Updated: ",
+                    "style": { "font-size": "11px", "color": "#888888" }
+                  },
+                  {
+                    "elmType": "span",
+                    "txtContent": "[$LastUpdated]",
+                    "style": { "font-size": "11px", "color": "#002060" }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "elmType": "div",
+            "style": {
+              "display": "flex",
+              "align-items": "center",
+              "justify-content": "flex-end",
+              "min-width": "100px"
+            },
+            "children": [
+              {
+                "elmType": "span",
+                "txtContent": "[$QtyOnHand]",
+                "style": {
+                  "font-size": "42px",
+                  "font-weight": "700",
+                  "color": "#002060",     /* inverted number */
+                  "line-height": "1"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+
+/:/:/::::::://:;::;::;;:::
+
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
   "height": "156",                 /* 140 + (8*2) */
   "width": "216",                  /* 200 + (8*2) */
   "hideSelection": true,
