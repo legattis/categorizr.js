@@ -1,6 +1,10 @@
 ## fRESH SHEEET
 
 
+first(body('Get_items')?['value'])?['DeviceType']
+
+first(body('Get_items')?['value'])?['DeviceType']?['Value']
+
 concat('DeviceType/Value eq ''', triggerBody()?['device'], '''')
 
 DeviceType eq '@{triggerBody()?['device']}'
