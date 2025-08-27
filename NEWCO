@@ -1,5 +1,7 @@
 ## fRESH SHEEET
 
+@contains(string(item()?['DeviceType']), '"Value":"Desktop"')
+
 
 @or(
   equals(item()?['DeviceType']?['Value'], triggerBody()?['device']),
