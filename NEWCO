@@ -1,5 +1,18 @@
 ## fRESH SHEEET
 
+
+body('Get_items')?['value']
+
+@equals(
+  toLower(trim(item()?['DeviceType']?['Value'])),
+  toLower(trim(triggerBody()?['device']))
+)
+
+length(body('Filter_array')?['body'])
+
+
+
+
 @equals(item()?['DeviceType']?['Value'], triggerBody()?['device'])
 
 
