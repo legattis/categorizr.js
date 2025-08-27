@@ -1,5 +1,9 @@
 ## fRESH SHEEET
 
+
+
+@contains(string(item()?['DeviceType']), concat('"Value":"', triggerBody()?['device'], '"'))
+
 @contains(string(item()?['DeviceType']), '"Value":"Desktop"')
 
 
