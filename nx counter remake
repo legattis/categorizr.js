@@ -1,0 +1,60 @@
+## nx counter remake
+
+A) Dynamic (preferred) — with DeviceType column in OIT-Product-Counters
+
+Steps inside the loop:
+
+Filter array – matchingStorage (advanced mode):
+@and(
+equals(item()?[‘DeviceType’]?[‘Value’], items(‘Apply_to_each’)?[‘val’]),
+equals(item()?[‘Status’]?[‘Value’], ‘Stored’)
+)
+
+Compose – cnt:
+length(body(‘Filter_array_-_matchingStorage’))
+
+Filter array – targetCounterRow:
+@equals(
+item()?[‘DeviceType’]?[‘Value’],
+items(‘Apply_to_each’)?[‘val’]
+)
+
+Condition – found a counter row?
+Left: length(body(‘Filter_array_-_targetCounterRow’))
+Operator: is greater than
+Right: 0
+
+Update item – Counters
+Id: first(body(‘Filter_array_-targetCounterRow’))?[‘ID’]
+QtyOnHand: outputs(’Compose-_cnt’)
+LastUpdated: utcNow()
+
+⸻
+
+B) Dynamic (no schema change) — match by Title with plural rule
+
+Steps inside the loop:
+
+Compose – counterTitle:
+if(
+equals(items(‘Apply_to_each’)?[‘val’],‘AIO’),
+‘AIO’,
+toUpper(concat(items(‘Apply_to_each’)?[‘val’],‘S’))
+)
+
+Filter array – targetCounterRow:
+@equals(
+toUpper(item()?[‘Title’]),
+outputs(‘Compose_-_counterTitle’)
+)
+
+Condition – found a counter row?
+Left: length(body(‘Filter_array_-_targetCounterRow’))
+Operator: is greater than
+Right: 0
+
+Update item – Counters
+Id: first(body(‘Filter_array_-targetCounterRow’))?[‘ID’]
+QtyOnHand: outputs(’Compose-_cnt’)
+LastUpdated: utcNow()
+
