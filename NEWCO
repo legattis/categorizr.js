@@ -1,6 +1,26 @@
 ## fRESH SHEEET
 
 
+@equals(
+  item()?['Device_x0020_Type'],
+  items('Apply_to_each')?['device']
+)
+
+
+@equals(
+  toLower(item()?['Title']),
+  toLower(items('Apply_to_each')?['title'])
+)
+
+
+coalesce(
+  first(body('Filter_array_-_counterRow'))?['Id'],
+  first(body('Filter_array_-_counterRow'))?['ID']
+)
+
+
+
+
 {
   "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
   "height": "156",
