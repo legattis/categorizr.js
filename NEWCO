@@ -1,5 +1,10 @@
 ## fRESH SHEEET
 
+@equals(
+  toLower(coalesce(item()?['DeviceType']?['Value'], item()?['DeviceType'])),
+  toLower(items('Apply_to_each')?['device'])
+)
+
 
 @equals(
   item()?['Device_x0020_Type'],
