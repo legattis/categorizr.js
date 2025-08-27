@@ -1,5 +1,12 @@
 ## fRESH SHEEET
 
+
+@equals(
+  coalesce(item()?['DeviceType']?['Value'], item()?['DeviceType']),
+  items('Apply_to_each')?['device']
+)
+
+
 @equals(
   toLower(coalesce(item()?['DeviceType']?['Value'], item()?['DeviceType'])),
   toLower(items('Apply_to_each')?['device'])
