@@ -1,5 +1,7 @@
 #styling sheets
 
+{ "Claims": concat('i:0#.f|membership|', first(body('Filter_array_-_mapRow'))?['IMSEmail']), "Email": first(body('Filter_array_-_mapRow'))?['IMSEmail'] }
+
 
 { "Email": first(body('Filter_array_-_mapRow'))?['IMSEmail'] }
 
