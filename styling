@@ -1,5 +1,9 @@
 #styling sheets
 
+
+first(body(‘Filter_array_-_mapRow’))?[‘IMSEmail’]
+
+
 @equals(
   toLower(string(item()?['EIL'])),
   toLower(string(items('Apply_to_each')?['EIL']))
