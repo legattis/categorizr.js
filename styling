@@ -1,5 +1,10 @@
 #styling sheets
 
+@equals(
+  toLower(string(item()?['EIL'])),
+  toLower(string(items('Apply_to_each')?['EIL']))
+)
+
 
 
 3b) Filter array – mapRow
