@@ -1,6 +1,8 @@
 #styling sheets
 
 
+{ "Email": first(body('Filter_array_-_mapRow'))?['IMSEmail'] }
+
 first(body(‘Filter_array_-_mapRow’))?[‘IMSEmail’]
 
 
