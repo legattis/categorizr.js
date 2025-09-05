@@ -1,0 +1,154 @@
+Operations, Compliance & Information Flow Manual
+
+“From Mystery to Mastery – How NX Finally Works”
+
+⸻
+
+I. Purpose & Vision
+
+We control the information → we control the inventory → we satisfy compliance.
+
+This manual is the operating blueprint for nonexpendable equipment (NX) management in Pittsburgh. It replaces scattered file chasing and ad-hoc processes with a disciplined flow of information. Every request, every record, every compliance checkpoint is tied into PADMD, ensuring accountability from intake to disposition.
+
+Core Principles
+	•	Control the information, control the inventory. Every physical action produces a data signal.
+	•	Transparency: Any stakeholder can see status without chasing files.
+	•	Compliance: VA Handbook 7002, Directive 1761, VISN QCR, and OIG findings are hard-coded into workflows.
+	•	Efficiency: Information flows to us; NX does not chase it down.
+	•	Adaptability: The model is platform-agnostic. Dashboards and automations are UI layers on top of an enforced data structure.
+	•	Accountability: IMS, COs, Material Handling, Scan, and customer shops each carry defined data responsibilities.
+
+This is not a SharePoint plan. It is a compliance plan built on the flow of information.
+
+⸻
+
+II. Stakeholders & Roles
+	•	Internal NX: Supervisor, IMS, Scan Team, Material Handling.
+	•	External: OIT, Biomed, FMS, clinical/admin services.
+	•	Leadership: Facility Director, VISN leadership, auditors.
+	•	Oversight Anchors: Accountable Officer (AO), Custodial Officers (COs).
+
+Material Handling is integral where it belongs: receipts, staging, and physical transfers of equipment. Every action handled by MH generates a corresponding data entry in the NX system.
+
+⸻
+
+III. How the System Works
+	1.	Intake – All requests come through structured intake forms. No email-first processes.
+	2.	Processing – Requests are routed into PADMD (Planning → Acquisition → Deployment → Maintenance → Disposition).
+	3.	Storage – Records are stored by process, not duplicated by service line or EIL.
+	4.	Metadata – Every file tagged with: Service Line, EIL, Request Type, Status, IMS Owner, FY, Due Date.
+	5.	Information Flow – IMS and Material Handling actions automatically generate data signals. COs must request changes through intake, not bypass NX.
+	6.	Views – Leadership sees compliance summaries, IMS see monitors, auditors see ROS status.
+
+Files do not drive the process. The process drives the files.
+
+⸻
+
+IV. PADMD-Aligned Structure & Compliance Mapping
+
+Planning
+	•	SEPG preparation, OA3, IMS assignments, strategic forecasts.
+	•	IMS must become SEPG experts; improper routing of equipment with no EIL must end.
+	•	Equipment Committee notes and 5-year replacement plans are documented here.
+
+Compliance tie: Proactively prevents idle or untracked assets, ensures EILs are set before acquisition, and satisfies QCR demands for forward planning.
+
+⸻
+
+Acquisition
+	•	Requisitions, approvals, receiving.
+	•	All NX assets are EE-tagged upon receipt in MH/Receiving before deployment or delivery.
+	•	Emergency purchases are logged with the same rigor as planned acquisitions.
+
+Compliance tie: Prevents ghost equipment; ensures all assets are tied to an EIL at entry.
+
+⸻
+
+Deployment
+	•	IMS update all equipment locations directly in the system.
+	•	COs and delegates are required to request all changes (relocation, repurpose, loan, etc.) through formal intake.
+	•	Material Handling movements are logged as data events.
+
+Compliance tie: Closes the OIG-identified gap where 33% of assets were not at the recorded location.
+
+⸻
+
+Maintenance
+	•	Annual Inventories: Every accountable item is checked annually, no exceptions. <95% accuracy triggers re-check within 6 months.
+	•	Loan Registry: Continuous record of all assets on loan.
+	•	Bill-of-Health Reports: Required for all assets deemed reusable. Responsibility lies with OIT, Biomed, and FMS trades (plumbing, electrical, electronics, etc.). NX does not chase this documentation; shops must submit it with the asset. No NX item moves to Excess without a bona fide Bill of Health.
+	•	Repairs & Research Equipment: Documented until resolved or disposed.
+
+Compliance tie: Prevents re-use of unverified or unsafe equipment, directly addressing OIG concerns about idle or misclassified gear.
+
+⸻
+
+Disposition
+	•	Turn-ins, inspections, ROS, excess, Unicor, recycling, disposal confirmations.
+	•	New tools unify Pittsburgh’s historically scattered processes into a single robust workflow.
+	•	ROS tracked through initiation → approval → closure; 60-day compliance enforced.
+	•	Excess postings require Bills of Health before acceptance, making the responsibility sit squarely on customer shops and service providers.
+	•	Material Handling supports staging and transfer, ensuring custody is documented from turn-in through disposal.
+
+Compliance tie: Directly addresses OIG findings of unresolved ROS reports and idle equipment left in limbo.
+
+⸻
+
+Contingency
+	•	Outage-proof intake: controlled templates, spreadsheets, and Uber-Tracker.
+	•	Post-outage reconciliation flows back into PADMD.
+
+Compliance tie: Ensures auditors see continuous accountability regardless of system status.
+
+⸻
+
+V. Governance & Oversight
+	•	Quarterly governance reviews: Forms, taxonomy, compliance checkpoints updated.
+	•	EIL oversight: Custodial officer assignments validated and corrected through scheduled review, not left to drift.
+	•	Annual review: AO, COs, and leadership jointly review inventories, ROS performance, and compliance metrics.
+
+Result: Facility Directors and AOs cannot defer oversight; compliance is visible and enforced.
+
+⸻
+
+VI. Dashboards (Proof-of-Concept Windows)
+
+The dashboards are not the system; they are windows into the system.
+	•	PPM monitors: Requests, inventories, and dispositions by IMS or EIL.
+	•	OIT counters: Simple in/out tallies.
+	•	ROS view: Per-IMS snapshot of active reports and their statuses, tied directly into the official portal.
+	•	Libraries & metadata: Enable emerging views by Service Line or EIL.
+
+Dashboards are in proof-of-concept stage today and will evolve. Their purpose is to surface compliance data, not replace the underlying structure.
+
+SharePoint is just the UI. The real control is the enforced data flow.
+
+⸻
+
+VII. OIG/QCR Compliance Alignment
+	•	Lost Assets: Prevented by mandatory tagging + annual inventories.
+	•	Location Accuracy: Maintained by IMS updates, triggered by CO requests.
+	•	Idle/Unused Assets: Planning and Disposition pipelines force transfer, reuse, or disposal.
+	•	Inventories: Annual, no exception.
+	•	Reports of Survey: Centralized, tracked, closed within 60 days.
+	•	Oversight: Facility Directors and AOs must act on compliance data presented live.
+
+⸻
+
+VIII. Contingency Operations
+	•	Trigger: System outage.
+	•	Intake: Controlled templates and tracker.
+	•	Reconciliation: All actions migrated back into PADMD.
+
+⸻
+
+IX. Bottom Line
+
+This plan is platform-agnostic, data-centric, and compliance-driven.
+	•	Material Handling is present where it supports the flow.
+	•	IMS own SEPG and EIL accountability.
+	•	COs must request changes through intake.
+	•	Customer shops are responsible for certifying equipment condition before Excess.
+	•	Dashboards remain simple proof-of-concept, but the underlying data flow already enforces compliance.
+
+We control the information → we control the inventory → we satisfy compliance.
