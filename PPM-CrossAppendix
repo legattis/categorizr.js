@@ -1,0 +1,22 @@
+
+⸻
+
+Appendix A – NX Compliance Crosswalk
+
+OIG/QCR Finding	PADMD Stage	Practice / Control	How It Resolves the Gap
+Lost/unaccounted assets (~75,500 items)	Acquisition → Deployment → Maintenance	Tagging at receipt (MH/Receiving); IMS updates locations; Annual Inventories	Assets are tagged on arrival, tracked through deployment, and physically verified annually with no exceptions.
+Wrong locations (33% mismatch)	Deployment	IMS responsible for updating all location changes; COs must request changes via intake; MH actions logged as data events	No silent moves. Every relocation requires a documented request; IMS updates system records.
+Idle/unused assets (~62,500 items)	Planning → Maintenance → Disposition	SEPG-driven planning; Bill-of-Health reviews; Disposition pipeline forces reuse/transfer/disposal	Planning prevents overbuying; shops certify condition; NX pipeline ensures assets don’t sit idle.
+Inventory by exception loophole (20+ months between checks)	Maintenance	Annual inventories, no exceptions; <95% triggers 6-month re-check	Every accountable item seen annually. No reliance on maintenance history to bypass inventory.
+Incomplete or missing ROS (915 unfinished, $31.2M; 210 missing)	Disposition	ROS workflow with initiation → approval → closure tracked; 60-day closure enforced; dashboards provide IMS status views	Every missing/damaged item generates a ROS; progress is visible until closure, meeting 60-day requirement.
+Poor custodial oversight	Planning → Deployment → Maintenance	Custodial Officers must request changes; CO assignments validated during EIL governance reviews	CO responsibility is enforced; IMS implement changes only after CO request; assignments kept current.
+Directors deferring oversight	Governance	Quarterly governance reviews; annual leadership compliance reviews	Facility Directors/AOs required to participate in scheduled compliance reviews; no passive deferral.
+Unverified re-use/disposal	Maintenance → Disposition	Bill-of-Health reports required from OIT, Biomed, FMS shops; no asset sent to Excess without certification	Responsibility sits with customer shops; NX receives documentation, doesn’t chase it.
+Fragmented Pittsburgh processes	Disposition (all)	Unified Turn-in/Disposition Log; ROS tracking; Excess/Unicor/Recycling channels integrated	Creates one robust process where scattered ones existed; documentation standardized across disposition routes.
+System outages causing accountability gaps	Contingency	Controlled templates, spreadsheets, Uber-Tracker; reconciliation into PADMD after outage	Continuous accountability even during outages; auditors see no blind spots.
+
+
+⸻
+
+👉 This appendix is what you hand over when someone says, “But how do we know your system addresses OIG’s concerns?” It connects the dots cleanly.
+
