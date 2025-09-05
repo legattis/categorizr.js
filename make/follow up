@@ -1,0 +1,7 @@
+Implementation notes you can drop into the SOP
+	•	Unique IDs (always): PPM-<TYPE>-YYYY-#### (ERQ, TRN, ROS, LOC, etc.).
+	•	Authoritative updates: IMS update official locations; CO/delegates request changes via intake.
+	•	Shops own BoH: OIT/Biomed/FMS must submit BoH for any reuse/excess; NX does not chase it.
+	•	Dashboards are windows: They reflect PADMD; they don’t replace it.
+	•	No exception inventories: Annual for all; <95% triggers a 6-month re-check.
+	•	ROS 60-day: Initiate → investigate → close; automatic reminders at 30/45/60.
